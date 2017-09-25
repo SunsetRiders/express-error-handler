@@ -1,0 +1,28 @@
+{
+  "name": "express-error-handler",
+  "version": "1.0.0",
+  "description": "A simple express error handler middleware.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "clear && nodemon index.js",
+    "start": "clear && nodejs index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunsetRiders/express-error-handler.git"
+  },
+  "keywords": [
+    "express",
+    "error-handler"
+  ],
+  "author": "Daitan Group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunsetRiders/express-error-handler/issues"
+  },
+  "homepage": "https://github.com/SunsetRiders/express-error-handler#readme",
+  "devDependencies": {
+    "eslint-config-sunset-nodejs": "git+https://git@github.com/SunsetRiders/eslint-config-sunset-nodejs.git",
+    "nodemon": "^1.12.1"
+  }
+}
