@@ -33,3 +33,28 @@ Add this into your **package.json** file.
  ```javascript
  $ npm i --save git+https://github.com/SunsetRiders/express-error-handler.git
  ```
+## Usage
+
+This is a middleware and must be the last one so it can intercept all application`s errors objects.
+
+*Add the code below into you **app.js** file.*
+
+ ```javascript
+const ExpressErrorHandler = require("express-error-handler");
+const Logger              = require('logger');
+
+...
+// DON'T FORGET TO ADD THE LOGGER
+// MODULE BEFORE THE ERROR HANDLER MIDDLEWARE
+// Set request middleware express
+app.use(ExpressXRequestId.requestMiddleware);
+
+// Set response middleware express
+app.use(ExpressXRequestId.responseMiddleware);
+
+// Express error handler middleware
+app.use(ExpressErrorHandler.middleware);
+...
+ ```
+
+
