@@ -13,7 +13,7 @@ To do that you **MUST PROPERLY** install this **REQUIRED** module and configure 
 
 https://github.com/SunsetRiders/logger
 
-The logger type used to store the log will always be *req.logger.error* mehtod.
+The logger type mehtod used to store the log will always be *req.logger.error*.
 
 ## Adding the module to the project
 
