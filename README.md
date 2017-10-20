@@ -3,7 +3,7 @@ A simple express error handler middleware.
 
 ## Project dependencies
 
-Every error throwed by any route method on the API will be parsed by this middleware function and then logged with the Logger module. It will also deliver to the requester app (resource requester) a json object containing the error message and the stack trace.
+Every error throwed by any route on the API will be parsed by this middleware function to the _response_ object and then sent as a _json_ to the frontend.
 
 **IMPORTANT: Stack trace will only be shown if *process.env.NODE_ENV* variable is configured to *development* so this way we take care to not display to the client application (resource requester) when in production or homologation our stack trace.**
 
@@ -24,7 +24,7 @@ Add this into your **package.json** file.
 ```javascript
 "dependencies": {
   ...
-  "express-error-handler": "git@github.com:SunsetRiders/express-error-handler.git"
+  "express-error-handler": "github:SunsetRiders/express-error-handler",
 }
  ```
  
