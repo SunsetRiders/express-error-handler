@@ -1,16 +1,23 @@
 const express             = require('express');
 const app                 = express();
 const ExpressErrorHandler = require('../lib/express-error-handler');
+const Logger              = require('logger');
+
+// process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'production';
+
+app.use(Logger.injectLogger({}.logs));
 
 app.use((req, res, next) => {
-  res.locals.metadata = {meta: 777};
+  const anyData = 777;
+  res.locals.metadata = {meta: anyData};
   res.locals.errors   = [{message: "(First) Internal Server Error!"}];
   next();
 });
 
-app.get('/error', (req, res) => {
+app.get('/error', (req, res, next) => {
   const err = new Error('(Second) Internal Server Error!');
-  throw err;
+  next(err);
 });
 
 app.use(ExpressErrorHandler.middleware);
