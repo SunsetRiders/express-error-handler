@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint-config-sunset-nodejs": "github:SunsetRiders/eslint-config-sunset-nodejs#v1.0.0",
     "express": "^4.16.2"
+  },
+  "dependencies": {
+    "logger": "git+https://github.com/SunsetRiders/logger.git"
   }
 }
